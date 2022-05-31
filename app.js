@@ -6,7 +6,8 @@ $("#addbtn").click(()=>{
     console.log(value);
     todo.push(value);
     console.log(todo);
-    display()
+    display();
+    $("#new-task").val("");
 })
 function display(){
     var list = ""
@@ -40,6 +41,9 @@ $("#updatebtn").click(()=>{
     todo[id]=value;
     console.log(todo);
     display();
+    $("#addbtn").show();
+    $("#updatebtn").hide();
+    $("#new-task").val("");
 })
 
 $(document).on("click" , ".delete", function(){
